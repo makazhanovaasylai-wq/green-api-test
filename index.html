@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GREEN-API test assignment">
+  <title>GREEN-API Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="workspace" aria-label="GREEN-API test interface">
+      <div class="controls">
+
+        <div class="field-group">
+          <input
+            id="idInstance"
+            class="input"
+            type="text"
+            placeholder="idInstance"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <input
+            id="apiTokenInstance"
+            class="input"
+            type="password"
+            placeholder="ApiTokenInstance"
+            autocomplete="off"
+            spellcheck="false"
+          >
+        </div>
+
+        <div class="button-group">
+          <button class="api-button" id="getSettings">getSettings</button>
+          <button class="api-button" id="getStateInstance">getStateInstance</button>
+        </div>
+
+        <div class="method-block">
+          <input
+            id="messageChatId"
+            class="input"
+            type="text"
+            placeholder="77771234567"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <textarea
+            id="messageText"
+            class="input textarea"
+            placeholder="Hello Green-API!"
+            rows="3"
+          ></textarea>
+          <button class="api-button" id="sendMessage">sendMessage</button>
+        </div>
+
+        <div class="method-block">
+          <input
+            id="fileChatId"
+            class="input"
+            type="text"
+            placeholder="77771234567"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <input
+            id="fileUrl"
+            class="input"
+            type="url"
+            placeholder="https://my.site.com/img/horse.png"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <input
+            id="fileName"
+            class="input"
+            type="text"
+            placeholder="horse.png"
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button class="api-button" id="sendFileByUrl">sendFileByUrl</button>
+        </div>
+
+      </div>
+
+      <div class="response-panel">
+        <div class="response-title">Ответ:</div>
+        <textarea id="response" class="response" readonly spellcheck="false">{
+}</textarea>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

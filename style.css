@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --border: #d9d9d9;
+  --border-hover: #bdbdbd;
+  --text: #333;
+  --muted: #777;
+  --background: #fff;
+  --button-background: #fff;
+  --focus: #8aa9d6;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 55px 20px 40px;
+}
+
+.workspace {
+  width: min(690px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.field-group,
+.button-group,
+.method-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.method-block {
+  gap: 6px;
+}
+
+.input,
+.api-button,
+.response {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.input {
+  height: 34px;
+  padding: 8px 10px;
+  outline: none;
+}
+
+.textarea {
+  height: 64px;
+  min-height: 64px;
+  resize: vertical;
+}
+
+.input:focus {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 2px rgba(138, 169, 214, 0.14);
+}
+
+.api-button {
+  min-height: 42px;
+  padding: 9px 10px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.api-button:hover {
+  border-color: var(--border-hover);
+  background: #fafafa;
+}
+
+.api-button:active {
+  background: #f2f2f2;
+}
+
+.api-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.response-panel {
+  min-width: 0;
+}
+
+.response-title {
+  margin: 7px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.response {
+  display: block;
+  height: 565px;
+  min-height: 430px;
+  padding: 12px;
+  resize: none;
+  outline: none;
+  line-height: 1.45;
+  overflow: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  white-space: pre;
+}
+
+@media (max-width: 650px) {
+  .page {
+    padding: 25px 14px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .response {
+    height: 360px;
+    min-height: 300px;
+  }
+}
